@@ -1,15 +1,31 @@
-<h1>Answer page</h1>
-<p><%= @question %></p>
-<p>- You</p>
 
-<% if @question == "I am going to work" %>
-  <p>Great!</p>
-<% elsif @question.last == "?" %>
-  <p>Silly question, get dressed and go to work!</p>
-<% else %>
-  <p>I don't care, get dressed and go to work!
-</p>
-<% end %>
-<p>- Your Coach</p>
+<div class="container">
+<h1 class="fs-1 lh-lg p-3">Stupid Coaching</h1>
+
+<div class="mt-3 p-3 mb-3 border-start border-5">
+  <div >
+    <blockquote class="blockquote mb-0 ms-2">
+      <p><%= @question %></p>
+      <footer class="blockquote-footer">You</footer>
+    </blockquote>
+  </div>
+</div>
+
+<div class="mt-3 p-3 mb-3 border-start border-5 bg-warning bg-opacity-10">
+  <div>
+    <blockquote class="blockquote mb-0 ms-2 ">
+    <% if @question == "I am going to work" %>
+      <p class="fw-bolder">Great!</p>
+    <% elsif @question.last == "?" %>
+      <p class="fw-bolder">Silly question, get dressed and go to work!</p>
+    <% else %>
+      <p class="fw-bolder">I don't care, get dressed and go to work!
+    </p>
+    <% end %>
+    <footer class="blockquote-footer">Your Coach</footer>
+    </blockquote>
+  </div>
+</div>
 
 <%= link_to "Ask a new question", ask_path %>
+</div>

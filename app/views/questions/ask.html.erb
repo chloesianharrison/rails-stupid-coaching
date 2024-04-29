@@ -1,6 +1,14 @@
-<h1>Ask page</h1>
+<div class="container">
+  <h1 class="fs-1 lh-lg">Stupid Coaching</h1>
 
-<form action="/answer" method="get" data-turbo="false">
-  <input type="text" name="answer">
-  <input type="submit" value="Ask!">
-</form>
+
+  <p class="ms-4">Ask your coach anything:</p>
+  <form action="/answer" method="get" data-turbo="false">
+    <div class="col-sm-10">
+      <input type="text" name="answer" class= "form-control-lg">
+    </div>
+    <div class="col-sm-2">
+      <input type="submit" value="Ask!" class= "btn btn-primary">
+    </div>
+  </form>
+</div>
